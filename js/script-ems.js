@@ -1,17 +1,17 @@
 // CREATE AN ARRAY OF EMPLOYEES
-let employees = [];
+let employees = []
 
 // GET DOM ELEMENTS
-let empForm     = document.querySelector('#addForm');
-let empTable    = document.querySelector('#empTable');
-let empCount    = document.querySelector('#empCount');
+let empForm     = document.querySelector('#addForm')
+let empTable    = document.querySelector('#empTable')
+let empCount    = document.querySelector('#empCount')
 let empTableBody = document.querySelector('tbody')
 
-    // let empID       = document.querySelector('#id')
-    // let empName     = document.querySelector('#name')
-    // let empExt      = document.querySelector('#extension')
-    // let empEmail    = document.querySelector('#email')
-    // let empDept     = document.querySelector('#department')
+    let empID       = document.querySelector('#id')
+    let empName     = document.querySelector('#name')
+    let empExt      = document.querySelector('#extension')
+    let empEmail    = document.querySelector('#email')
+    let empDept     = document.querySelector('#department')
 
 // CHECK TO SEE IF STORAGE OBJECT EXISTS WHEN THE PAGE LOADS
 // IF DOES, RETURN STORAGE OBJECT INTO ARRAY INSTEAD OF POPULATED ARRAY
@@ -54,8 +54,7 @@ empForm.addEventListener('submit', (e) => {
     // ADD THE NEW EMPLOYEE TO A NEW ARRAY OBJECT
     const newEmployee = [empID, empName, empExt, empEmail, empDept]
     // PUSH THE NEW ARRAY TO THE *EXISTING* EMPLOYEES ARRAY
-    employees.push(newEmployee)
-    console.log(employees)
+    addEmployee(newEmployee)
     // BUILD THE GRID
     buildGrid()
     // RESET THE FORM
@@ -72,7 +71,7 @@ empTable.addEventListener('click', (e) => {
 
         // REMOVE EMPLOYEE FROM ARRAY
         empTable.deleteRow(e.target.parentElement.parentElement.rowIndex);
-
+        count--;
 
         // BUILD THE GRID
         //buildGrid();
@@ -90,18 +89,17 @@ function buildGrid() {
 
     // LOOP THROUGH THE ARRAY OF EMPLOYEES
     // REBUILDING THE ROW STRUCTURE
-
+    console.log(employees)
     employees.forEach((employee) => {
         const row = document.createElement('tr');
-         row.innerHTML =  `
-                        <td>${employee.empID}</td>
-                        <td>${employee.empName}</td>
-                        <td>${employee.empExt}</td>
-                        <td>${employee.empEmail}</td>
-                        <td>${employee.empDept}</td>
-                        <td><button class="btn btn-danger btn-sm delete-btn">X</button></td>
-                    `;
-
+        row.innerHTML = `
+            <td>${employee.empID}</td>
+            <td>${employee.empName}</td>
+            <td>${employee.empExt}</td>
+            <td>${employee.empEmail}</td>
+            <td>${employee.empDept}</td>
+            <td><button class="btn btn-danger btn-sm delete-btn">X</button></td>
+        `;
         // Append the constructed row to the <tbody> tag
      tbody.appendChild(row);    
     });
