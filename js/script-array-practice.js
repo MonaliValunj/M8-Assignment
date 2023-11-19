@@ -160,21 +160,52 @@
 //  let leastFavMovies = ["Drishaym2","Crazy Rich Asians","All Good Things"]
 
 //STEP 13
-let movies = [["A Beautiful Mind", 1], ["Interstellar", 2], ["The Post", 3], ["The Pianist", 4], ["Drishaym2", 5]];
+// let movies = [["A Beautiful Mind", 1], ["Interstellar", 2], ["The Post", 3], ["The Pianist", 4], ["Drishaym2", 5]];
 
+// const movieNames = [];
 
-    let movieNames = movies.filter((movie) => {
-        return typeof movie[0] === 'string';
-   });
-   console.log(movieNames)
+// for (let i = 0; i < movies.length; i++) {
+//     if (typeof movies[i][0] === 'string') {
+//         movieNames.push(movies[i][0]);
+//     }
+// }
+// movieNames.forEach(m => {
+//     console.log(m);
+// });
 
-
-//console.log(movieNames)
 
 //STEP 14
+// let employees = ["MONALI", "JOHN", "JESSICA", "MARK","FRED","SALLY"]
+// let showEmployee = function(arr){
+//      console.log("Employees: \n\n")
+//      arr.forEach((element) => console.log(element))
+// }
+// showEmployee(employees)
+
 
 //STEP 15
+// var arr =[58, '', 'abcd', true, null, false, 0]
+// function filterArray(elm){
+//      return (elm != null && elm !== false && elm !== "" && elm !== 0);
+//  }
+// console.log(arr.filter(filterArray));
 
 //STEP 16
+// var arr = [2,4,5,76,8,9,0,22,34,54,12,45]
+
+// function randomNum(arr){
+//      return arr[Math.floor(Math.random()*arr.length)]
+// }
+// console.log(randomNum(arr))
 
 //STEP 17
+
+// var arr = arr = [2, 4, 5, 76, 8, 9, 0, 22, 34, 54, 12, 45]
+// var largest = 0;
+
+// for (var i = 0; i < arr.length; i++) {
+//   if (arr[i] > largest ) {
+//     largest = arr[i];
+//   }
+// }
+// console.log(largest);
