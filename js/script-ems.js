@@ -19,9 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const storedEmployees = JSON.parse(localStorage.getItem('employees'));
     if (storedEmployees) {
         employees = storedEmployees;
-        //buildGrid(); // Build the grid with stored employees on page load
-    } else {
-       // buildGrid(); // Build the grid with the initial set of employees
+        buildGrid(); // Build the grid with stored employees on page load
     }
 
 });
