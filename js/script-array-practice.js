@@ -156,10 +156,20 @@
 
 
 //STEP 12
- let FavMovies = ["A Beautiful Mind", "Interstellar","The Post","The Pianist"]
-
+//  let FavMovies = ["A Beautiful Mind", "Interstellar","The Post","The Pianist","Drishaym2","Crazy Rich Asians","All Good Things"]
+//  let leastFavMovies = ["Drishaym2","Crazy Rich Asians","All Good Things"]
 
 //STEP 13
+let movies = [["A Beautiful Mind", 1], ["Interstellar", 2], ["The Post", 3], ["The Pianist", 4], ["Drishaym2", 5]];
+
+
+    let movieNames = movies.filter((movie) => {
+        return typeof movie[0] === 'string';
+   });
+   console.log(movieNames)
+
+
+//console.log(movieNames)
 
 //STEP 14
 
